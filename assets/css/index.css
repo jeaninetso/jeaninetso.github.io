@@ -291,6 +291,23 @@ body {
 
 
 @media (max-width: 800px) {
+  #menu {
+    font-size: 14px;
+  }
+  .nav-bar-item a {
+    color: #333;
+    text-decoration: none;
+    padding-right: 20px;
+    letter-spacing: 2px;
+    opacity: 0.6;
+  }
+  @keyframes slideIn {
+    to { transform: translate(-400px, -5px); }
+  }
+  @keyframes slideOut {
+    from { transform: translate(-400px, -5px); }
+    to { transform: translate(0vw, -5px); }
+  }
   #intro-content {
     display: flex;
     flex-direction: column;
