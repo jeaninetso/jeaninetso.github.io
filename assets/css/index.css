@@ -22,12 +22,19 @@ body {
   background-color: #fcfcfc;
   z-index: 998;
 }
-.nav-bar-item a {
+.nav-bar-item {
   color: #333;
   text-decoration: none;
   padding-right: 32px;
   letter-spacing: 2px;
   opacity: 0.6;
+}
+.nav-img {
+  display: none;
+}
+.nav-bar-item a {
+  color: #333;
+  text-decoration: none;
 }
 .nav-bar-item a:hover {
   transition: 0.2s;
@@ -116,7 +123,7 @@ body {
   justify-content: center;
   margin-left: 19.5vw;
   margin-right: 19.5vw;
-  margin-top: 12vw;
+  margin-top: 16vw;
   margin-bottom: 12vw;
 }
 .intro-item {
@@ -294,18 +301,27 @@ body {
   #menu {
     font-size: 14px;
   }
-  .nav-bar-item a {
+  .nav-bar-item {
     color: #333;
     text-decoration: none;
-    padding-right: 20px;
+    padding-right: 30px;
     letter-spacing: 2px;
     opacity: 0.6;
   }
+  .nav-text {
+    display: none;
+  }
+  .nav-img {
+    display: flex;
+  }
+  .nav-img img {
+    width: 20px;
+  }
   @keyframes slideIn {
-    to { transform: translate(-400px, -5px); }
+    to { transform: translate(-280px, -5px); }
   }
   @keyframes slideOut {
-    from { transform: translate(-400px, -5px); }
+    from { transform: translate(-280px, -5px); }
     to { transform: translate(0vw, -5px); }
   }
   #intro-content {
