@@ -294,7 +294,6 @@ body {
   #intro-content {
     display: flex;
     flex-direction: column;
-    /* text-align: center; */
     margin-left: 16vw;
     margin-right: 16vw;
     margin-bottom: 20vh;
