@@ -315,6 +315,7 @@ body {
     display: flex;
   }
   .nav-img img {
+    height: 20px;
     width: 20px;
   }
   @keyframes slideIn {
