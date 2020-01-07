@@ -18,25 +18,24 @@ body {
   padding: 5px;
   padding-left: 25px;
   border-radius: 30px;
-  transform: translate(3vw, -5px);
+  transform: translate(-3px, -5px);
   background-color: #fcfcfc;
   z-index: 998;
 }
 .nav-bar-item {
-  color: #333;
-  text-decoration: none;
-  padding-right: 32px;
-  letter-spacing: 2px;
   opacity: 0.6;
+  margin-right: 32px;
+  letter-spacing: 2px;
 }
 .nav-img {
   display: none;
 }
 .nav-bar-item a {
   color: #333;
+  opacity: 0.6;
   text-decoration: none;
 }
-.nav-bar-item a:hover {
+.nav-bar-item:hover {
   transition: 0.2s;
   opacity: 1;
 }
@@ -45,9 +44,9 @@ body {
   display: flex;
   background-color: #fcfcfc;
   flex-direction: column;
-  margin-top: -1px;
+  margin-top: -2px;
   transform: translateX(-45px);
-  opacity: 0.5;
+  opacity: 0.6;
   z-index: 1000;
 }
 #menu-lines:hover {
@@ -95,10 +94,10 @@ body {
   z-index: 999;
 }
 @keyframes slideIn {
-  to { transform: translate(-460px, -5px); }
+  to { transform: translate(-480px, -5px); }
 }
 @keyframes slideOut {
-  from { transform: translate(-460px, -5px); }
+  from { transform: translate(-480px, -5px); }
   to { transform: translate(0vw, -5px); }
 }
 #blob {
@@ -231,7 +230,7 @@ body {
   display: flex;
   flex-direction: column;
 } */
-#artwork, #multi-slider, #image-stack {
+#art, #multi-slider, #image-stack {
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -299,12 +298,11 @@ body {
 
 @media (max-width: 800px) {
   #menu {
-    font-size: 14px;
+    padding-right: 15px;
   }
   .nav-bar-item {
     color: #333;
     text-decoration: none;
-    padding-right: 30px;
     letter-spacing: 2px;
     opacity: 0.6;
   }
@@ -318,11 +316,21 @@ body {
     height: 20px;
     width: 20px;
   }
+  #blank-space {
+    background-color: #fcfcfc;
+    width: 90px;
+    padding: 5px;
+    height: 20px;
+    border-radius: 30px;
+    transform: translate(-60px, -5px);
+    position: fixed;
+    z-index: 999;
+  }
   @keyframes slideIn {
-    to { transform: translate(-280px, -5px); }
+    to { transform: translate(-275px, -5px); }
   }
   @keyframes slideOut {
-    from { transform: translate(-280px, -5px); }
+    from { transform: translate(-275px, -5px); }
     to { transform: translate(0vw, -5px); }
   }
   #intro-content {
