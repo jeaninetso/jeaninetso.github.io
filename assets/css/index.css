@@ -106,12 +106,10 @@ body {
 #blob img {
   opacity: 0.9;
   position: fixed;
-  width: 510px;
+  width: 30vw;
   overflow: hidden;
-  margin-left: 59.5vw;
-  margin-top: 64vh;
-  margin-bottom: -2vh;
-  float: right;
+  bottom: 0;
+  right: 0;
   z-index: -1000;
 }
 #intro-content {
@@ -161,10 +159,21 @@ body {
   display: flex;
   flex-direction: column;
 }
+#blob-accent {
+  position: absolute;
+  top: -6vh;
+  left: -7vw;
+  z-index: -100;
+}
+#blob-accent img {
+  opacity: 0.15;
+  width: 16vw;
+  transform: scale(-1, -1);
+}
 #title {
   font-family: "Solway", serif;
   font-size: 3.1vw;
-  margin-bottom: 6vh;
+  margin-bottom: 10vh;
 }
 .row {
   display: flex;
@@ -351,9 +360,16 @@ body {
     font-size: 14px;
     line-height: 24px;
   }
+  #blob {
+    float: bottom;
+  }
   #blob img {
-    margin-top: 84vh;
-    width: 40vw;
+    /* margin-top: 108vh;
+    margin-left: 54vw; */
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    width: 42vw;
   }
   #title {
     font-size: 32px;
