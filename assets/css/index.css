@@ -1,6 +1,6 @@
 body {
   background-color: #fcfcfc;
-  font-family: "Chivo", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 16px;
   color: #444;
 }
@@ -46,26 +46,26 @@ body {
   flex-direction: column;
   margin-top: -2px;
   transform: translateX(-45px);
-  opacity: 0.6;
+  opacity: 0.5;
   z-index: 1000;
 }
 #menu-lines:hover {
   transition: 0.2s;
   cursor: pointer;
-  opacity: 0.9;
+  opacity: 1;
 }
 .line img {
   width: 16px;
 }
 .line {
-  margin: -7px;
+  margin: -8px;
 }
 @keyframes lineOne {
   from {transform: rotate(0deg) translate(0px, 0px);}
-  to {transform: rotate(45deg) translate(7px, 2px);}
+  to {transform: rotate(45deg) translate(7px, 1.5px);}
 }
 @keyframes lineOneBack {
-  from {transform: rotate(45deg) translate(7px, 2px);}
+  from {transform: rotate(45deg) translate(7px, 1.5px);}
   to {transform: rotate(0deg) translate(0px, 0px);}
 }
 @keyframes lineTwo {
@@ -78,11 +78,11 @@ body {
 }
 @keyframes lineThree {
   from {transform: rotate(0deg) translate(0px 0px);}
-  to {transform: rotate(-45deg) translate(1px, -5px);}
+  to {transform: rotate(-45deg) translate(1px, -4.5px);}
 }
 @keyframes lineThreeBack {
   to {transform: rotate(0deg) translate(0px 0px);}
-  from {transform: rotate(-45deg) translate(1px, -5px);}
+  from {transform: rotate(-45deg) translate(1px, -4.5px);}
 }
 #blank-space {
   background-color: #fcfcfc;
@@ -149,7 +149,8 @@ body {
   letter-spacing: 1px;
 }
 #intro {
-  font-family: "Solway", serif;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
   font-size: 28px;
 }
 .content {
@@ -171,7 +172,8 @@ body {
   transform: scale(-1, -1);
 }
 #title {
-  font-family: "Solway", serif;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
   font-size: 3.1vw;
   margin-bottom: 10vh;
 }
@@ -185,14 +187,15 @@ body {
   width: 35vw;
   margin-right: 5vw;
   margin-bottom: 5vw;
-  opacity: 0.8;
+  /* opacity: 0.8; */
 }
 .project-image img {
   border-radius: 0.5vw;
   width: 35vw;
 }
 .project-title {
-  font-family: "Solway", serif;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
   margin-left: 3px;
   margin-top: 5px;
   letter-spacing: 1px;
@@ -200,11 +203,15 @@ body {
   font-size: 18px;
   color: #333;
 }
-.project-tile:hover {
+.project-title a {
+  text-decoration: none;
+  color: #333;
+}
+/* .project-tile:hover {
   transition: 0.5s;
   transform: translateY(-6px);
   opacity: 1;
-}
+} */
 .project-blurb {
   margin: 3px;
   font-size: 14px;
@@ -219,7 +226,7 @@ body {
   font-style: oblique;
   color: #444;
 }
-.text-link a:hover {
+.text-link a:hover, .project-title a:hover {
   /* transition: 0.2s; */
   text-decoration: underline;
   text-decoration-style: double;
@@ -267,14 +274,16 @@ body {
 }
 .title {
   font-size: 2vw;
-  font-family: "Solway", serif;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
   margin-bottom: 1vw;
+  letter-spacing: 1px;
 }
 .text {
   display: inline;
   font-size: 1.3vw;
   line-height: 2vw;
-  letter-spacing: 0.1vw;
+  letter-spacing: 1px;
 }
 #proverbs {
   align-self: center;
@@ -301,6 +310,14 @@ body {
   margin-right: 4vw;
   width: 12vw;
   text-align: right;
+}
+#footer {
+  font-size: 16px;
+  color: #bbbbbb;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
 }
 
 
@@ -354,6 +371,8 @@ body {
     width: 50vw;
   }
   #intro {
+    font: "DM Sans", sans-serif;
+    font-style: bold;
     font-size: 20px;
   }
   #bio, .text, .project-blurb {
