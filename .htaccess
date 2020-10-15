@@ -1,3 +1,5 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+<FilesMatch "(?i)^.*\.(ico|flv|jpg|jpeg|png|gif|js|css|woff)$">ExpiresActive OnExpiresDefault A2592000</FilesMatch>
