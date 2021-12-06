@@ -1,3 +1,6 @@
+html {
+  min-height: 100vh;
+}
 body {
   background-color: #fcfcfc;
   font-family: "DM Sans", sans-serif;
@@ -46,10 +49,12 @@ body {
   flex-direction: column;
   margin-top: -2px;
   transform: translateX(-45px);
-  opacity: 0.5;
+  opacity: 0.7;
+  transition: 0.2s;
   z-index: 1000;
 }
 #menu-lines:hover {
+  transform: translateX(-45px) scale(1.1);
   transition: 0.2s;
   cursor: pointer;
   opacity: 1;
@@ -149,7 +154,7 @@ body {
   letter-spacing: 1px;
 }
 #intro {
-  font-family: "DM Sans", sans-serif;
+  font-family: "DM Mono", monospace;
   font-weight: 700;
   font-size: 28px;
 }
@@ -160,7 +165,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-#blob-accent {
+/* #blob-accent {
   position: absolute;
   top: -3.5vw;
   left: -7vw;
@@ -170,9 +175,9 @@ body {
   opacity: 0.15;
   width: 16vw;
   transform: scale(-1, -1);
-}
+} */
 #title {
-  font-family: "DM Sans", sans-serif;
+  font-family: "DM Mono", monospace;
   font-weight: 700;
   font-size: 3.1vw;
   margin-bottom: 10vh;
@@ -194,24 +199,19 @@ body {
   width: 35vw;
 }
 .project-title {
-  font-family: "DM Sans", sans-serif;
+  font-family: "DM Mono", monospace;
   font-weight: 700;
   margin-left: 3px;
-  margin-top: 5px;
-  letter-spacing: 1px;
+  margin-top: 6px;
+  letter-spacing: 0.8px;
   line-height: 25px;
   font-size: 18px;
-  color: #333;
+  color: #444;
 }
 .project-title a {
   text-decoration: none;
-  color: #333;
+  color: #555;
 }
-/* .project-tile:hover {
-  transition: 0.5s;
-  transform: translateY(-6px);
-  opacity: 1;
-} */
 .project-blurb {
   margin: 3px;
   font-size: 14px;
@@ -223,20 +223,18 @@ body {
 }
 .text-link a {
   text-decoration: none;
-  font-style: oblique;
-  color: #444;
+  color: #e4c3a8;
 }
 .text-link a:hover, .project-title a:hover {
-  /* transition: 0.2s; */
+  color: #333;
   text-decoration: underline;
-  text-decoration-style: double;
-  text-decoration-color: #ff7b61;
+  text-decoration-style: wavy;
+  text-decoration-color: #e4c3a8;
 }
-.text-link a:active {
+.text-link a:active, .project-title a:active {
   transition: 0.1s;
-  text-decoration: underline;
-  text-decoration-style: double;
-  text-decoration-color: #ff441f;
+  color: #333;
+  text-decoration-color: #C59278;
 }
 /* #multi-slider {
   display: flex;
@@ -272,10 +270,14 @@ body {
   display: flex;
   flex-direction: column;
 }
+.caption.title {
+  color: #444;
+}
 .title {
   font-size: 2vw;
-  font-family: "DM Sans", sans-serif;
+  font-family: "DM Mono", monospace;
   font-weight: 700;
+  color: #777;
   margin-bottom: 1vw;
   letter-spacing: 1px;
 }
@@ -413,10 +415,6 @@ body {
   }
   .project-tile {
     margin-bottom: 8vw;
-  }
-  .project-title {
-    margin-top: 2vw;
-    margin-bottom: 1vw;
   }
   .content {
     margin-bottom: 8vw;
