@@ -1,7 +1,11 @@
 let menuOpen = false;
-document.getElementById("menu-lines").onclick = doMenuThings;
+let menuLines = document.getElementById("menu-lines");
+menuLines.onclick = doMenuThings;
 
 function toggleClose() {
+  if (!menuLines) {
+    return;
+  }
   let lineOne = document.getElementById("line-1");
   let lineTwo = document.getElementById("line-2");
   let lineThree = document.getElementById("line-3");
@@ -21,8 +25,12 @@ function toggleClose() {
     lineThree.style.animationFillMode = "forwards";
   }
 }
+
 function toggleMenu() {
   let menu = document.getElementById("menu");
+  if (!menuLines) {
+    return;
+  }
   if (!menuOpen) {
     menu.style.animation = "slideIn 0.5s";
     menu.style.animationFillMode = "forwards";
