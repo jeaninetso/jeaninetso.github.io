@@ -13,7 +13,7 @@ export const artwork: ArtworkPiece[] = [
   {
     title: 'Observe My Ways',
     image: '/images/proverbs.png',
-    text: 'Inspired by Proverbs 23:26 — "My son, give me your heart, and let your eyes observe my ways." Intended to portray the closeness of scrutiny that humans need to have of their own lives if they are to call themselves examples for others. Tools: Adobe Illustrator.',
+    text: 'Inspired by Proverbs 23:26, "My son, give me your heart, and let your eyes observe my ways." Intended to portray the closeness of scrutiny that humans need to have of their own lives if they are to call themselves examples for others. Tools: Adobe Illustrator.',
   },
   {
     title: "Julian's Room",

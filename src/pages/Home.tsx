@@ -13,8 +13,8 @@ export default function Home() {
         <div className="mt-6 space-y-5 text-base leading-relaxed sm:text-lg">
           <p>
             I&apos;m a software engineer with four years of experience, most
-            recently front-end leaning &mdash; Angular day-to-day, with React
-            and Vue/Nuxt from past roles. I like starting from people&apos;s
+            recently front-end leaning, Angular day-to-day, with React and
+            Vue/Nuxt from past roles. I like starting from people&apos;s
             actual problems rather than the tech first.
           </p>
           <p>
@@ -32,7 +32,7 @@ export default function Home() {
             for almost four years as a software engineer.
           </p>
           <p>
-            I&apos;m looking for my next software engineering role &mdash;
+            I&apos;m looking for my next software engineering role.
             I&apos;d love to talk. Reach me via{' '}
             <a
               href="mailto:jtso3388@berkeley.edu"
