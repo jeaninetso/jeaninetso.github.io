@@ -18,7 +18,7 @@ export const personalProjects: Project[] = [
     image: '/images/kingpin.png',
     blurb:
       'Redesigned a bakery website with an aesthetic, user-friendly menu layout, illustrating menu items in Adobe Illustrator.',
-    link: 'https://www.behance.net/gallery/91172855/King-Pin-Donuts',
+    link: 'https://github.com/jeaninetso/kingpin-donuts',
   },
   {
     title: 'Build Your Own World',
