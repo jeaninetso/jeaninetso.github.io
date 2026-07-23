@@ -34,12 +34,12 @@ export const roles: Role[] = [
         text: 'Banking Solutions: worked on the front page of the banking solutions website (Angular).',
       },
       {
-        text: "Accelerate Farm Profits: contributed to making the app fully mobile-responsive and kept the theming and UI compliant with UX design specifications. When the team upgraded to a new major version of Angular, helped preserve the visual design system, keeping Angular-dependent design tokens and styles consistent despite significant changes under the hood.",
+        text: 'Accelerate Farm Profits: contributed to making the app fully mobile-responsive and kept the theming and UI compliant with UX design specifications.',
         link: 'https://afp.moodysanalytics.com/',
         linkLabel: 'product',
       },
       {
-        text: 'Balance Sheet Risk Management: most recently, helped build components for a balance sheet risk management application.',
+        text: 'Balance Sheet Risk Management: most recently, helped build components for a balance sheet risk management application. When the team upgraded to a new major version of Angular, helped preserve the visual design system, keeping Angular-dependent design tokens and styles consistent despite significant changes under the hood.',
         link: 'https://www.moodys.com/web/en/us/solutions/balance-sheet-management/capital-management.html',
         linkLabel: 'product',
       },
