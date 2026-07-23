@@ -1,11 +1,17 @@
 import type { Project } from './projects'
 
+export type Bullet = {
+  text: string
+  link?: string
+  linkLabel?: string
+}
+
 export type Role = {
   company: string
   title: string
   dates: string
   summary?: string
-  bullets?: string[]
+  bullets?: Bullet[]
   projects?: Project[]
   draft?: boolean
 }
@@ -19,10 +25,24 @@ export const roles: Role[] = [
     summary:
       'Worked across several teams over four years, spanning back-end financial modeling APIs and front-end product work.',
     bullets: [
-      'Commercial Mortgage Metrics: built a GraphQL API (C#/.NET) so users could persist their own custom coefficients for financial model calculations.',
-      'Banking Solutions: worked on the front page of the banking solutions website (Angular).',
-      'Accelerate Farm Profits: helped build a fully mobile-responsive web application for farmers (Angular), a public Moody\'s product.',
-      'Balance Sheet Risk Management: most recently, helped build components for a balance sheet risk management application.',
+      {
+        text: 'Commercial Mortgage Metrics: built a GraphQL API (C#/.NET) so users could persist their own custom coefficients for financial model calculations.',
+        link: 'https://www.moodyscre.com/products/cmm/',
+        linkLabel: 'product',
+      },
+      {
+        text: 'Banking Solutions: worked on the front page of the banking solutions website (Angular).',
+      },
+      {
+        text: "Accelerate Farm Profits: contributed to making the app fully mobile-responsive and kept the theming and UI compliant with UX design specifications. When the team upgraded to a new major version of Angular, helped preserve the visual design system, keeping Angular-dependent design tokens and styles consistent despite significant changes under the hood.",
+        link: 'https://afp.moodysanalytics.com/',
+        linkLabel: 'product',
+      },
+      {
+        text: 'Balance Sheet Risk Management: most recently, helped build components for a balance sheet risk management application.',
+        link: 'https://www.moodys.com/web/en/us/solutions/balance-sheet-management/capital-management.html',
+        linkLabel: 'product',
+      },
     ],
   },
   {

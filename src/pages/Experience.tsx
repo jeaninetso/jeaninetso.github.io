@@ -34,7 +34,22 @@ export default function Experience() {
             {role.bullets && (
               <ul className="mt-3 list-disc space-y-2 pl-5 text-base leading-relaxed">
                 {role.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
+                  <li key={bullet.text}>
+                    {bullet.text}
+                    {bullet.link && (
+                      <>
+                        {' '}
+                        <a
+                          href={bullet.link}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-accent underline decoration-accent-soft underline-offset-2 hover:decoration-accent"
+                        >
+                          ({bullet.linkLabel ?? 'link'})
+                        </a>
+                      </>
+                    )}
+                  </li>
                 ))}
               </ul>
             )}
