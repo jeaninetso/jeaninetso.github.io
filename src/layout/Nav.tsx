@@ -3,6 +3,7 @@ const links = [
   { id: 'experience', label: 'experience' },
   { id: 'projects', label: 'projects' },
   { id: 'artwork', label: 'artwork' },
+  { id: 'resume', label: 'resume' },
 ]
 
 function scrollToSection(
@@ -43,15 +44,6 @@ export default function Nav({ active }: { active: string }) {
           </a>
         )
       })}
-      <a
-        href="/resume.pdf"
-        target="_blank"
-        rel="noreferrer"
-        className="flex items-center text-ink-faint transition-colors hover:text-accent"
-      >
-        <span className="inline-block w-3" aria-hidden="true" />
-        resume
-      </a>
     </nav>
   )
 }

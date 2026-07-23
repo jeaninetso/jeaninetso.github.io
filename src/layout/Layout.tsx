@@ -4,6 +4,7 @@ import Home from '../pages/Home'
 import Experience from '../pages/Experience'
 import Projects from '../pages/Projects'
 import Artwork from '../pages/Artwork'
+import Resume from '../pages/Resume'
 
 export default function Layout() {
   const active = useActiveSection()
@@ -30,6 +31,9 @@ export default function Layout() {
         </section>
         <section id="artwork" className="mt-24 scroll-mt-28 border-t border-line pt-16">
           <Artwork />
+        </section>
+        <section id="resume" className="mt-24 scroll-mt-28 border-t border-line pt-16">
+          <Resume />
         </section>
         <footer className="mt-16 text-xs text-ink-faint">
           Designed and built by Jeanine Tso.
