@@ -5,23 +5,7 @@ export type Project = {
   link?: string
 }
 
-export const professionalProjects: Project[] = [
-  {
-    title: 'NASA Advanced Air Mobility Portal',
-    image: '/images/aam.png',
-    blurb:
-      'Integrated a front-end with a headless CMS (Directus) during a Nuxt.js migration, and helped build a content architecture that reduced file redundancies.',
-  },
-  {
-    title: 'NASA University Leadership Initiative',
-    image: '/images/uli.png',
-    blurb:
-      'Designed and implemented a fully mobile-responsive site to improve user experience finding program information.',
-    link: 'https://uli-v4.netlify.app/',
-  },
-]
-
-export const learningProjects: Project[] = [
+export const personalProjects: Project[] = [
   {
     title: 'Welcome To Omelas',
     image: '/images/omelas.png',

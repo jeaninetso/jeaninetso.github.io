@@ -28,8 +28,8 @@ export default function Home() {
               International Student Mentorship Program
             </a>
             , supporting college students with academic, professional, and
-            spiritual mentorship. Before that, I was at Moody&apos;s Analytics
-            for almost four years as a software engineer.
+            spiritual mentorship. Before that, I was at Moody&apos;s for almost
+            four years as a software engineer.
           </p>
           <p>
             I&apos;m looking for my next software engineering role.
