@@ -1,9 +1,16 @@
 export default function Home() {
   return (
     <div className="mx-auto max-w-xl px-4 pt-6 sm:px-10 sm:pt-10">
-      <h1 className="font-mono text-3xl font-medium text-ink sm:text-4xl">
-        Hello, I&apos;m Jeanine.
-      </h1>
+      <div className="flex items-center gap-5">
+        <img
+          src="/images/jeanine-portrait.png"
+          alt="Jeanine"
+          className="w-20 shrink-0 rounded-md sm:w-24"
+        />
+        <h1 className="font-mono text-3xl font-medium text-ink sm:text-4xl">
+          Hello, I&apos;m Jeanine.
+        </h1>
+      </div>
       <div className="mt-6 space-y-5 text-base leading-relaxed sm:text-lg">
         <p>
           Software engineer is my title, I love grinding through tickets. But
