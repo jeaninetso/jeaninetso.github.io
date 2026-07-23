@@ -9,22 +9,27 @@ const links = [
 
 const linkClass = ({ isActive }: { isActive: boolean }) =>
   isActive
-    ? 'text-ink border-b border-accent pb-1'
-    : 'text-ink-faint hover:text-accent pb-1 transition-colors'
+    ? 'text-ink font-medium'
+    : 'text-ink-faint hover:text-accent transition-colors'
 
 export default function Nav() {
   return (
-    <nav className="flex flex-wrap items-center gap-x-8 gap-y-2 font-mono text-sm tracking-wide">
+    <nav className="flex flex-row flex-wrap gap-x-6 gap-y-2 font-mono text-sm tracking-wide sm:flex-col sm:gap-y-4">
       {links.map((link) => (
         <NavLink key={link.to} to={link.to} end={link.end} className={linkClass}>
-          {link.label}
+          {({ isActive }) => (
+            <>
+              {isActive && <span className="text-accent">{'> '}</span>}
+              {link.label}
+            </>
+          )}
         </NavLink>
       ))}
       <a
         href="/resume.pdf"
         target="_blank"
         rel="noreferrer"
-        className="text-ink-faint hover:text-accent pb-1 transition-colors"
+        className="text-ink-faint hover:text-accent transition-colors"
       >
         resume
       </a>

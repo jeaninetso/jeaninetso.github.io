@@ -2,7 +2,7 @@ import { artwork } from '../data/artwork'
 
 export default function Artwork() {
   return (
-    <div className="mx-auto max-w-4xl pt-12 sm:pt-20">
+    <div className="mx-auto max-w-4xl pt-2">
       <h1 className="font-mono text-3xl font-medium text-ink sm:text-4xl">
         Artwork
       </h1>

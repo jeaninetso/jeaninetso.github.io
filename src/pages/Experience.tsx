@@ -3,7 +3,7 @@ import ProjectTile from '../components/ProjectTile'
 
 export default function Experience() {
   return (
-    <div className="mx-auto max-w-3xl pt-12 sm:pt-20">
+    <div className="mx-auto max-w-3xl pt-2">
       <h1 className="font-mono text-3xl font-medium text-ink sm:text-4xl">
         Experience
       </h1>
