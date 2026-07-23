@@ -21,7 +21,6 @@ export const roles: Role[] = [
     company: "Moody's",
     title: 'Software Engineer',
     dates: '~4 years',
-    draft: true,
     summary:
       'Worked across several teams over four years, spanning back-end financial modeling APIs and front-end product work.',
     bullets: [
