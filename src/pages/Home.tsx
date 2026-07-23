@@ -3,7 +3,7 @@ export default function Home() {
     <div className="mx-auto max-w-xl px-4 pt-6 sm:px-10 sm:pt-10">
       <div className="flex items-center gap-5">
         <img
-          src="/images/jeanine-jumping-clean.png"
+          src="/images/jeanine-jumping.png"
           alt="Jeanine"
           className="w-20 shrink-0 rounded-md sm:w-24"
         />
