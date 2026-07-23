@@ -36,3 +36,12 @@ body {
   background-color: var(--color-accent-soft);
   color: var(--color-ink);
 }
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -14,44 +14,42 @@ export default function Experience() {
               <h2 className="font-mono text-lg font-medium text-ink">
                 {role.title} &middot; {role.company}
               </h2>
-              <div className="flex items-baseline gap-3">
-                {role.draft && (
-                  <span className="font-mono text-xs italic text-ink-faint">
-                    draft, pending review
-                  </span>
-                )}
-                {role.dates && (
-                  <span className="font-mono text-xs text-ink-faint">
-                    {role.dates}
-                  </span>
-                )}
-              </div>
+              {role.dates && (
+                <span className="font-mono text-xs text-ink-faint">
+                  {role.dates}
+                </span>
+              )}
             </div>
 
             {role.summary && (
               <p className="mt-3 text-base leading-relaxed">{role.summary}</p>
             )}
-            {role.bullets && (
-              <ul className="mt-3 list-disc space-y-2 pl-5 text-base leading-relaxed">
-                {role.bullets.map((bullet) => (
-                  <li key={bullet.text}>
-                    {bullet.text}
-                    {bullet.link && (
-                      <>
-                        {' '}
-                        <a
-                          href={bullet.link}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-accent underline decoration-accent-soft underline-offset-2 hover:decoration-accent"
-                        >
-                          ({bullet.linkLabel ?? 'link'})
-                        </a>
-                      </>
+            {role.cards && (
+              <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
+                {role.cards.map((card) => (
+                  <div
+                    key={card.title}
+                    className="rounded-md border border-line p-5"
+                  >
+                    <h3 className="font-mono text-sm font-medium text-ink">
+                      {card.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed">
+                      {card.text}
+                    </p>
+                    {card.link && (
+                      <a
+                        href={card.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="mt-3 inline-block text-sm text-accent underline decoration-accent-soft underline-offset-2 hover:decoration-accent"
+                      >
+                        ({card.linkLabel ?? 'link'})
+                      </a>
                     )}
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
             )}
             {role.projects && (
               <div className="mt-6 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2">

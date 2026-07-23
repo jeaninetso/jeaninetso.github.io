@@ -26,13 +26,19 @@ export default function Nav({ active }: { active: string }) {
             key={link.id}
             href={`#${link.id}`}
             onClick={(event) => scrollToSection(event, link.id)}
-            className={
+            className={`flex items-center transition-colors duration-300 ease-out ${
               isActive
-                ? 'text-ink font-medium'
-                : 'text-ink-faint hover:text-accent transition-colors'
-            }
+                ? 'text-ink'
+                : 'text-ink-faint hover:text-accent'
+            }`}
           >
-            {isActive && <span className="text-accent">{'> '}</span>}
+            <span
+              className="inline-block w-3 text-accent transition-opacity duration-300 ease-out"
+              style={{ opacity: isActive ? 1 : 0 }}
+              aria-hidden="true"
+            >
+              {'>'}
+            </span>
             {link.label}
           </a>
         )
@@ -41,8 +47,9 @@ export default function Nav({ active }: { active: string }) {
         href="/resume.pdf"
         target="_blank"
         rel="noreferrer"
-        className="text-ink-faint hover:text-accent transition-colors"
+        className="flex items-center text-ink-faint transition-colors hover:text-accent"
       >
+        <span className="inline-block w-3" aria-hidden="true" />
         resume
       </a>
     </nav>
