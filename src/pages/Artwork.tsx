@@ -2,28 +2,28 @@ import { artwork } from '../data/artwork'
 
 export default function Artwork() {
   return (
-    <div className="mx-auto max-w-4xl pt-2">
+    <div className="pt-2">
       <h1 className="font-mono text-3xl font-medium text-ink sm:text-4xl">
         Artwork
       </h1>
-      <div className="mt-10 flex flex-col gap-16">
+      <div className="mt-10 flex gap-8 overflow-x-auto pb-6 snap-x snap-mandatory">
         {artwork.map((piece) => (
-          <div
+          <figure
             key={piece.title}
-            className="flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-10"
+            className="w-64 shrink-0 snap-start sm:w-80"
           >
             <img
               src={piece.image}
               alt={piece.title}
-              className="w-full rounded-md sm:w-1/2"
+              className="w-full rounded-md"
             />
-            <div className="sm:w-1/2">
-              <h2 className="font-mono text-lg font-medium text-ink">
+            <figcaption className="mt-3">
+              <h2 className="font-mono text-base font-medium text-ink">
                 {piece.title}
               </h2>
-              <p className="mt-2 text-sm leading-relaxed">{piece.text}</p>
-            </div>
-          </div>
+              <p className="mt-1 text-sm leading-relaxed">{piece.text}</p>
+            </figcaption>
+          </figure>
         ))}
       </div>
     </div>

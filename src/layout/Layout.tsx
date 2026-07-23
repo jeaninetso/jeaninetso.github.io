@@ -1,19 +1,36 @@
-import { Outlet } from 'react-router-dom'
 import Nav from './Nav'
+import useActiveSection from './useActiveSection'
+import Home from '../pages/Home'
+import Experience from '../pages/Experience'
+import Projects from '../pages/Projects'
+import Artwork from '../pages/Artwork'
 
 export default function Layout() {
+  const active = useActiveSection()
+
   return (
     <div className="mx-auto grid min-h-screen max-w-5xl grid-cols-1 sm:grid-cols-[168px_1fr]">
-      <aside className="border-b border-line px-6 py-6 sm:border-b-0 sm:border-r sm:px-5 sm:py-10">
-        <div className="mb-0 font-mono text-[11px] tracking-wide text-ink-faint sm:mb-7">
+      <aside className="sticky top-0 z-10 border-b border-line bg-paper px-6 py-6 sm:h-screen sm:self-start sm:border-b-0 sm:border-r sm:px-5 sm:py-10">
+        <div className="font-mono text-[11px] tracking-wide text-ink-faint sm:mb-7">
           JT&nbsp;PORTFOLIO
         </div>
         <div className="mt-4 sm:mt-0">
-          <Nav />
+          <Nav active={active} />
         </div>
       </aside>
-      <main className="px-6 pb-16 pt-8 sm:px-14 sm:pt-10">
-        <Outlet />
+      <main className="min-w-0 px-6 pb-16 pt-8 sm:px-14 sm:pt-10">
+        <section id="home" className="scroll-mt-28">
+          <Home />
+        </section>
+        <section id="experience" className="mt-24 scroll-mt-28 border-t border-line pt-16">
+          <Experience />
+        </section>
+        <section id="projects" className="mt-24 scroll-mt-28 border-t border-line pt-16">
+          <Projects />
+        </section>
+        <section id="artwork" className="mt-24 scroll-mt-28 border-t border-line pt-16">
+          <Artwork />
+        </section>
         <footer className="mt-16 text-xs text-ink-faint">
           Designed and built by Jeanine Tso.
         </footer>

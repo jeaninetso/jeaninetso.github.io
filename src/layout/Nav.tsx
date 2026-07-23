@@ -1,30 +1,42 @@
-import { NavLink } from 'react-router-dom'
-
 const links = [
-  { to: '/', label: 'home', end: true },
-  { to: '/experience', label: 'experience' },
-  { to: '/projects', label: 'projects' },
-  { to: '/artwork', label: 'artwork' },
+  { id: 'home', label: 'home' },
+  { id: 'experience', label: 'experience' },
+  { id: 'projects', label: 'projects' },
+  { id: 'artwork', label: 'artwork' },
 ]
 
-const linkClass = ({ isActive }: { isActive: boolean }) =>
-  isActive
-    ? 'text-ink font-medium'
-    : 'text-ink-faint hover:text-accent transition-colors'
+function scrollToSection(
+  event: React.MouseEvent<HTMLAnchorElement>,
+  id: string,
+) {
+  const target = document.getElementById(id)
+  if (!target) return
+  event.preventDefault()
+  target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  history.replaceState(null, '', `#${id}`)
+}
 
-export default function Nav() {
+export default function Nav({ active }: { active: string }) {
   return (
     <nav className="flex flex-row flex-wrap gap-x-6 gap-y-2 font-mono text-sm tracking-wide sm:flex-col sm:gap-y-4">
-      {links.map((link) => (
-        <NavLink key={link.to} to={link.to} end={link.end} className={linkClass}>
-          {({ isActive }) => (
-            <>
-              {isActive && <span className="text-accent">{'> '}</span>}
-              {link.label}
-            </>
-          )}
-        </NavLink>
-      ))}
+      {links.map((link) => {
+        const isActive = active === link.id
+        return (
+          <a
+            key={link.id}
+            href={`#${link.id}`}
+            onClick={(event) => scrollToSection(event, link.id)}
+            className={
+              isActive
+                ? 'text-ink font-medium'
+                : 'text-ink-faint hover:text-accent transition-colors'
+            }
+          >
+            {isActive && <span className="text-accent">{'> '}</span>}
+            {link.label}
+          </a>
+        )
+      })}
       <a
         href="/resume.pdf"
         target="_blank"
