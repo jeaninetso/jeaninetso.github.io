@@ -1,4 +1,5 @@
 import { roles } from '../data/experience'
+import Card from '../components/Card'
 
 export default function Experience() {
   return (
@@ -38,34 +39,17 @@ export default function Experience() {
             {role.cards && (
               <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
                 {role.cards.map((card) => (
-                  <div
+                  <Card
                     key={card.title}
-                    className="rounded-md border border-line p-5"
+                    image={card.image}
+                    imageAlt={card.title}
+                    title={card.title}
+                    link={card.link}
+                    linkLabel={card.linkLabel}
+                    tone="plain"
                   >
-                    {card.image && (
-                      <img
-                        src={card.image}
-                        alt={card.title}
-                        className="mb-4 w-full rounded-sm"
-                      />
-                    )}
-                    <h3 className="font-mono text-sm font-medium text-ink">
-                      {card.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed">
-                      {card.text}
-                    </p>
-                    {card.link && (
-                      <a
-                        href={card.link}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="mt-3 inline-block text-sm text-accent underline decoration-accent-soft underline-offset-2 hover:decoration-accent"
-                      >
-                        ({card.linkLabel ?? 'link'})
-                      </a>
-                    )}
-                  </div>
+                    {card.text}
+                  </Card>
                 ))}
               </div>
             )}
