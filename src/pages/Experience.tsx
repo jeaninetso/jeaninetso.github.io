@@ -15,7 +15,7 @@ export default function Experience() {
                   <img
                     src={role.logo}
                     alt={`${role.company} logo`}
-                    className="h-8 w-8 rounded-sm object-contain"
+                    className="h-8 w-auto max-w-[110px] shrink-0 object-contain"
                     onError={(event) => {
                       event.currentTarget.style.display = 'none'
                     }}
