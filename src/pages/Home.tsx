@@ -18,7 +18,8 @@ export default function Home() {
           to build solutions that truly address their needs.
         </p>
         <p>
-          That&apos;s why I spent this past year in Cambodia launching the{' '}
+          That&apos;s why I spent this past year in Cambodia launching a
+          local chapter of the{' '}
           <a
             href="https://www.internationalmentorship.org/"
             target="_blank"

@@ -15,10 +15,10 @@ export default function Resume() {
         </a>
       </div>
       <div className="mt-8 overflow-hidden rounded-md border border-line">
-        <iframe
-          src="/resume.pdf"
-          title="Jeanine Tso's resume"
-          className="h-[70vh] w-full sm:h-[800px]"
+        <img
+          src="/images/resume-page-1.png"
+          alt="Jeanine Tso's resume"
+          className="w-full"
         />
       </div>
     </div>

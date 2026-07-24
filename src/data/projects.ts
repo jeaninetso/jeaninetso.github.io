@@ -1,8 +1,9 @@
 export type Project = {
   title: string
-  image: string
+  image?: string
   blurb: string
   link?: string
+  status?: string
 }
 
 export const personalProjects: Project[] = [
@@ -26,5 +27,26 @@ export const personalProjects: Project[] = [
     blurb:
       'Implemented a 2-D tile-based world exploration engine in Java to build a Pacman-like game, with added rules for gameplay.',
     link: 'https://www.youtube.com/watch?v=i97rGJl2mBM',
+  },
+  {
+    title: 'Grocery Tracker',
+    blurb: 'Tracking grocery purchases and spending over time.',
+    status: 'in progress',
+  },
+  {
+    title: 'Job App Tracker',
+    blurb: 'Tracking job applications and their status through the search process.',
+    status: 'in progress',
+  },
+  {
+    title: 'Maps-to-Telegram Contact Bridge',
+    blurb:
+      'A Chrome extension that bridges contact info from Google Maps listings into Telegram.',
+    status: 'in progress',
+  },
+  {
+    title: 'Bible Quiz App',
+    blurb: 'A quiz app for testing and building familiarity with Bible knowledge.',
+    status: 'in progress',
   },
 ]
