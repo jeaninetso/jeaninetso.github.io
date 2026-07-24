@@ -7,7 +7,7 @@ export default function Projects() {
       <h1 className="font-mono text-3xl font-medium text-ink sm:text-4xl">
         Projects
       </h1>
-      <div className="mt-10 grid grid-cols-1 gap-x-10 gap-y-12 sm:grid-cols-2">
+      <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
         {personalProjects.map((project) => (
           <ProjectTile key={project.title} project={project} />
         ))}

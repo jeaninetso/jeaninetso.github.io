@@ -21,6 +21,7 @@ export default function ProjectTile({ project }: { project: Project }) {
       imageAlt={project.title}
       title={title}
       badge={project.status}
+      tags={project.tags}
       tone="tinted"
     >
       {project.blurb}

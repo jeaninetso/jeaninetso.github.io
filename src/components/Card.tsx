@@ -8,6 +8,7 @@ type CardProps = {
   title: ReactNode
   badge?: string
   tone?: CardTone
+  tags?: string[]
   link?: string
   linkLabel?: string
   children: ReactNode
@@ -19,6 +20,7 @@ export default function Card({
   title,
   badge,
   tone = 'plain',
+  tags,
   link,
   linkLabel,
   children,
@@ -45,6 +47,18 @@ export default function Card({
         )}
       </div>
       <div className="mt-2 text-sm leading-relaxed">{children}</div>
+      {tags && tags.length > 0 && (
+        <div className="mt-3 flex flex-wrap gap-1.5">
+          {tags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full border border-line px-2 py-0.5 font-mono text-xs text-ink-soft"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
       {link && (
         <a
           href={link}
