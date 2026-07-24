@@ -15,11 +15,13 @@ export default function Artwork() {
       </h1>
       <div className="mt-10 max-w-xl">
         <div key={piece.title} className="animate-[fade-in_0.3s_ease-out]">
-          <img
-            src={piece.image}
-            alt={piece.title}
-            className="w-full rounded-md"
-          />
+          <div className="flex h-72 items-center justify-center overflow-hidden rounded-md bg-paper-dim sm:h-96">
+            <img
+              src={piece.image}
+              alt={piece.title}
+              className="max-h-full max-w-full rounded-md object-contain"
+            />
+          </div>
           <div className="mt-4">
             <h2 className="font-mono text-base font-medium text-ink">
               {piece.title}

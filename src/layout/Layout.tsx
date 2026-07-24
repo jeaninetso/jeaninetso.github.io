@@ -6,6 +6,8 @@ import Projects from '../pages/Projects'
 import Artwork from '../pages/Artwork'
 import Resume from '../pages/Resume'
 
+const ANCHOR = 'scroll-mt-[140px] sm:scroll-mt-8'
+
 export default function Layout() {
   const active = useActiveSection()
 
@@ -20,20 +22,28 @@ export default function Layout() {
         </div>
       </aside>
       <main className="min-w-0 px-6 pb-16 pt-8 sm:px-14 sm:pt-10">
-        <section id="home" className="scroll-mt-28">
+        <div id="home" className={ANCHOR}>
           <Home />
+        </div>
+        <section className="mt-24 border-t border-line pt-16">
+          <div id="experience" className={ANCHOR}>
+            <Experience />
+          </div>
         </section>
-        <section id="experience" className="mt-24 scroll-mt-28 border-t border-line pt-16">
-          <Experience />
+        <section className="mt-24 border-t border-line pt-16">
+          <div id="projects" className={ANCHOR}>
+            <Projects />
+          </div>
         </section>
-        <section id="projects" className="mt-24 scroll-mt-28 border-t border-line pt-16">
-          <Projects />
+        <section className="mt-24 border-t border-line pt-16">
+          <div id="artwork" className={ANCHOR}>
+            <Artwork />
+          </div>
         </section>
-        <section id="artwork" className="mt-24 scroll-mt-28 border-t border-line pt-16">
-          <Artwork />
-        </section>
-        <section id="resume" className="mt-24 scroll-mt-28 border-t border-line pt-16">
-          <Resume />
+        <section className="mt-24 border-t border-line pt-16">
+          <div id="resume" className={ANCHOR}>
+            <Resume />
+          </div>
         </section>
         <footer className="mt-16 text-xs text-ink-faint">
           Designed and built by Jeanine Tso.
