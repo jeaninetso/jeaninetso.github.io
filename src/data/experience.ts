@@ -1,6 +1,7 @@
 export type Card = {
   title: string
   text: string
+  image?: string
   link?: string
   linkLabel?: string
 }
@@ -58,10 +59,12 @@ export const roles: Role[] = [
       {
         title: 'NASA Advanced Air Mobility Portal',
         text: 'Integrated a front-end with a headless CMS (Directus) during a Nuxt.js migration, and helped build a content architecture that reduced file redundancies.',
+        image: '/images/aam.png',
       },
       {
         title: 'NASA University Leadership Initiative',
         text: 'Designed and implemented a fully mobile-responsive site to improve user experience finding program information.',
+        image: '/images/uli.png',
         link: 'https://uli-v4.netlify.app/',
         linkLabel: 'site',
       },

@@ -15,7 +15,7 @@ export default function Experience() {
                   <img
                     src={role.logo}
                     alt={`${role.company} logo`}
-                    className="h-8 w-auto max-w-[110px] shrink-0 object-contain"
+                    className="h-9 w-9 shrink-0 rounded-sm object-contain"
                     onError={(event) => {
                       event.currentTarget.style.display = 'none'
                     }}
@@ -42,6 +42,13 @@ export default function Experience() {
                     key={card.title}
                     className="rounded-md border border-line p-5"
                   >
+                    {card.image && (
+                      <img
+                        src={card.image}
+                        alt={card.title}
+                        className="mb-4 w-full rounded-sm"
+                      />
+                    )}
                     <h3 className="font-mono text-sm font-medium text-ink">
                       {card.title}
                     </h3>
