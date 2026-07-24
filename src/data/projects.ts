@@ -15,7 +15,7 @@ export const personalProjects: Project[] = [
     status: 'in progress',
   },
   {
-    title: 'Maps-to-Telegram Contact Bridge',
+    title: 'Telegram Contact Bridge',
     blurb:
       'A Chrome extension that bridges contact info from Google Maps listings into Telegram.',
     status: 'in progress',
@@ -26,7 +26,7 @@ export const personalProjects: Project[] = [
     status: 'in progress',
   },
   {
-    title: 'Job App Tracker',
+    title: 'Job Search Tracker',
     blurb: 'Tracking job applications and their status through the search process.',
     status: 'in progress',
   },
