@@ -24,18 +24,26 @@ export const personalProjects: Project[] = [
     status: 'in progress',
   },
   {
-    title: 'Grocery Tracker',
-    blurb: 'Tracking grocery purchases and spending over time.',
+    title: 'Grocery Demand Forecast',
+    blurb:
+      'A full-stack app that forecasts near-term grocery demand from historical sales data, built to demonstrate product work around an ML forecast (data pipeline, API, and a picker + chart UI) for a job application.',
+    tags: ['FastAPI', 'PostgreSQL', 'Prophet', 'React', 'TypeScript'],
     status: 'in progress',
   },
   {
     title: 'Job Search Tracker',
-    blurb: 'Tracking job applications and their status through the search process.',
+    blurb:
+      'A shared accountability tool for a friend group job-searching together: everyone sets a daily checklist of goals and keeps a streak alive by completing it.',
+    tags: ['React', 'TypeScript', 'Supabase'],
+    link: 'https://github.com/jeaninetso/job-search-tracker',
     status: 'in progress',
   },
   {
-    title: 'Bible Quiz App',
-    blurb: 'A quiz app for testing and building familiarity with Bible knowledge.',
+    title: 'Scripture Quest',
+    blurb:
+      'A gamified Bible-knowledge hub: pick a book, take a quiz generated fresh each time and grounded in the ESV, learn fun facts, and track streaks, XP, and badges.',
+    tags: ['React', 'TypeScript', 'Zod', 'Vitest'],
+    link: 'https://github.com/jeaninetso/bible-quiz-app',
     status: 'in progress',
   },
   {
