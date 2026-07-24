@@ -49,4 +49,11 @@ export const personalProjects: Project[] = [
     blurb: 'A quiz app for testing and building familiarity with Bible knowledge.',
     status: 'in progress',
   },
+  {
+    title: 'Task Scheduler',
+    blurb:
+      'A dependency-aware task scheduler built to practice DSA concepts like topological sort and heaps, alongside React and TypeScript.',
+    link: 'https://github.com/jeaninetso/task-scheduler',
+    status: 'in progress',
+  },
 ]
