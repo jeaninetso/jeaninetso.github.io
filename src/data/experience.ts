@@ -9,6 +9,7 @@ export type Role = {
   company: string
   title: string
   dates: string
+  logo?: string
   summary?: string
   cards?: Card[]
 }
@@ -18,6 +19,7 @@ export const roles: Role[] = [
     company: "Moody's",
     title: 'Software Engineer',
     dates: '2021–2025',
+    logo: '/images/moodys-logo.png',
     summary:
       'Worked across several teams over four years, spanning back-end financial modeling APIs and front-end product work.',
     cards: [
@@ -49,6 +51,7 @@ export const roles: Role[] = [
     company: 'Marqui Labs',
     title: 'Front-End Developer Intern',
     dates: '2023',
+    logo: '/images/marqui-labs-logo.png',
     summary:
       'Front-end development for a NASA-contracted startup, working across a Vue.js/Nuxt.js stack with a Directus headless CMS.',
     cards: [

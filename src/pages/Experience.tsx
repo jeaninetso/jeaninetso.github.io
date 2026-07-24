@@ -9,10 +9,22 @@ export default function Experience() {
       <div className="mt-10 flex flex-col gap-14">
         {roles.map((role) => (
           <div key={role.company}>
-            <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-              <h2 className="font-mono text-lg font-medium text-ink">
-                {role.title} &middot; {role.company}
-              </h2>
+            <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+              <div className="flex items-center gap-3">
+                {role.logo && (
+                  <img
+                    src={role.logo}
+                    alt={`${role.company} logo`}
+                    className="h-8 w-8 rounded-sm object-contain"
+                    onError={(event) => {
+                      event.currentTarget.style.display = 'none'
+                    }}
+                  />
+                )}
+                <h2 className="font-mono text-lg font-medium text-ink">
+                  {role.title} &middot; {role.company}
+                </h2>
+              </div>
               {role.dates && (
                 <span className="font-mono text-xs text-ink-faint">
                   {role.dates}
