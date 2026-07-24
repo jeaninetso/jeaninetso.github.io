@@ -1,5 +1,4 @@
 import { roles } from '../data/experience'
-import ProjectTile from '../components/ProjectTile'
 
 export default function Experience() {
   return (
@@ -48,13 +47,6 @@ export default function Experience() {
                       </a>
                     )}
                   </div>
-                ))}
-              </div>
-            )}
-            {role.projects && (
-              <div className="mt-6 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2">
-                {role.projects.map((project) => (
-                  <ProjectTile key={project.title} project={project} />
                 ))}
               </div>
             )}

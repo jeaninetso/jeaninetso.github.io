@@ -1,5 +1,3 @@
-import type { Project } from './projects'
-
 export type Card = {
   title: string
   text: string
@@ -13,7 +11,6 @@ export type Role = {
   dates: string
   summary?: string
   cards?: Card[]
-  projects?: Project[]
 }
 
 export const roles: Role[] = [
@@ -54,19 +51,16 @@ export const roles: Role[] = [
     dates: '2023',
     summary:
       'Front-end development for a NASA-contracted startup, working across a Vue.js/Nuxt.js stack with a Directus headless CMS.',
-    projects: [
+    cards: [
       {
         title: 'NASA Advanced Air Mobility Portal',
-        image: '/images/aam.png',
-        blurb:
-          'Integrated a front-end with a headless CMS (Directus) during a Nuxt.js migration, and helped build a content architecture that reduced file redundancies.',
+        text: 'Integrated a front-end with a headless CMS (Directus) during a Nuxt.js migration, and helped build a content architecture that reduced file redundancies.',
       },
       {
         title: 'NASA University Leadership Initiative',
-        image: '/images/uli.png',
-        blurb:
-          'Designed and implemented a fully mobile-responsive site to improve user experience finding program information.',
+        text: 'Designed and implemented a fully mobile-responsive site to improve user experience finding program information.',
         link: 'https://uli-v4.netlify.app/',
+        linkLabel: 'site',
       },
     ],
   },

@@ -22,7 +22,7 @@ export default function Artwork() {
               className="max-h-full max-w-full rounded-md object-contain"
             />
           </div>
-          <div className="mt-4">
+          <div className="mt-4 min-h-[170px] sm:min-h-[130px]">
             <h2 className="font-mono text-base font-medium text-ink">
               {piece.title}
             </h2>
