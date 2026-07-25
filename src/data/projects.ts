@@ -22,7 +22,6 @@ export const personalProjects: Project[] = [
     blurb:
       'A Chrome extension that bridges contact info from Google Maps listings into Telegram.',
     tags: ['Chrome Extension', 'JavaScript', 'Node.js'],
-    status: 'in progress',
   },
   {
     title: 'Grocery Demand Forecast',
