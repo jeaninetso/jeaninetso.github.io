@@ -18,6 +18,7 @@ export const personalProjects: Project[] = [
   },
   {
     title: 'Telegram Contact Bridge',
+    image: '/images/telegram-contact-bridge.png',
     blurb:
       'A Chrome extension that bridges contact info from Google Maps listings into Telegram.',
     tags: ['Chrome Extension', 'JavaScript', 'Node.js'],
