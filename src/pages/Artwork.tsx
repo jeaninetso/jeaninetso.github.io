@@ -13,7 +13,7 @@ export default function Artwork() {
       <h1 className="font-mono text-3xl font-medium text-ink sm:text-4xl">
         Artwork
       </h1>
-      <div className="mt-10 max-w-xl">
+      <div className="mt-10">
         <div key={piece.title} className="animate-[fade-in_0.3s_ease-out]">
           <div className="flex h-72 items-center justify-center overflow-hidden rounded-md bg-paper-dim sm:h-96">
             <img

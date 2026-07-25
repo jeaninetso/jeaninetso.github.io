@@ -25,6 +25,7 @@ export const personalProjects: Project[] = [
   },
   {
     title: 'Grocery Demand Forecast',
+    image: '/images/grocery-demand-forecast.png',
     blurb:
       'A full-stack app that forecasts near-term grocery demand from historical sales data, built to demonstrate product work around an ML forecast (data pipeline, API, and a picker + chart UI) for a job application.',
     tags: ['FastAPI', 'PostgreSQL', 'Prophet', 'React', 'TypeScript'],
