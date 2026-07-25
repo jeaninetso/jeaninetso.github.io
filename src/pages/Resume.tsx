@@ -17,7 +17,7 @@ export default function Resume() {
       <div className="mt-8 overflow-hidden rounded-md border border-line">
         <img
           src="/images/resume-page-1.png"
-          alt="Jeanine Tso's resume"
+          alt="Jeanine Tso Lin's resume"
           className="w-full"
         />
       </div>

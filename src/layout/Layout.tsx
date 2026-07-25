@@ -15,7 +15,7 @@ export default function Layout() {
     <div className="mx-auto grid min-h-screen max-w-5xl grid-cols-1 sm:grid-cols-[168px_1fr]">
       <aside className="sticky top-0 z-10 border-b border-line bg-paper px-6 py-6 sm:h-screen sm:self-start sm:border-b-0 sm:border-r sm:px-5 sm:py-10">
         <div className="font-mono text-[11px] tracking-wide text-ink-faint sm:mb-7">
-          JT&nbsp;PORTFOLIO
+          JL&nbsp;PORTFOLIO
         </div>
         <div className="mt-4 sm:mt-0">
           <Nav active={active} />
@@ -46,7 +46,7 @@ export default function Layout() {
           </div>
         </section>
         <footer className="mt-16 text-xs text-ink-faint">
-          Designed and built by Jeanine Tso.
+          Designed and built by Jeanine Tso Lin.
         </footer>
       </main>
     </div>
