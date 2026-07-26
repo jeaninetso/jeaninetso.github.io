@@ -26,13 +26,13 @@ export const roles: Role[] = [
     cards: [
       {
         title: 'Commercial Mortgage Metrics',
-        text: 'Built a GraphQL API (C#/.NET) so users could persist their own custom coefficients for financial model calculations.',
+        text: 'Built a GraphQL API (C#/.NET) for users to persist their own custom coefficients for financial model calculations.',
         link: 'https://www.moodyscre.com/products/cmm/',
         linkLabel: 'product',
       },
       {
         title: 'Banking Solutions',
-        text: 'Worked on the front page of the banking solutions website (Angular).',
+        text: 'Implemented UI/UX designs on front page of product website (Angular).',
       },
       {
         title: 'Accelerate Farm Profits',
@@ -42,7 +42,7 @@ export const roles: Role[] = [
       },
       {
         title: 'Balance Sheet Risk Management',
-        text: 'Most recently, helped build components for a balance sheet risk management application. When the team upgraded to a new major version of Angular, helped preserve the visual design system, keeping Angular-dependent design tokens and styles consistent despite significant changes under the hood.',
+        text: 'Helped build components for a balance sheet risk management application. When the team upgraded to a new major version of Angular, helped preserve the visual design system, keeping Angular-dependent design tokens and styles consistent despite significant changes under the hood.',
         link: 'https://www.moodys.com/web/en/us/solutions/balance-sheet-management/capital-management.html',
         linkLabel: 'product',
       },
