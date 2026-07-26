@@ -41,6 +41,7 @@ export const personalProjects: Project[] = [
   },
   {
     title: 'Scripture Quest',
+    image: '/images/scripture-quest.png',
     blurb:
       'A gamified Bible-knowledge hub: pick a book, take a quiz generated fresh each time and grounded in the ESV, learn fun facts, and track streaks, XP, and badges.',
     tags: ['React', 'TypeScript', 'Zod', 'Vitest'],
