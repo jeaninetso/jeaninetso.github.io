@@ -8,14 +8,15 @@ export type Project = {
 }
 
 export const personalProjects: Project[] = [
-  {
-    title: 'Task Scheduler',
-    blurb:
-      'A dependency-aware task scheduler built to practice DSA concepts like topological sort and heaps, alongside React and TypeScript.',
-    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vitest'],
-    link: 'https://github.com/jeaninetso/task-scheduler',
-    status: 'in progress',
-  },
+  // Hidden until a screenshot is ready -- re-add when asked.
+  // {
+  //   title: 'Task Scheduler',
+  //   blurb:
+  //     'A dependency-aware task scheduler built to practice DSA concepts like topological sort and heaps, alongside React and TypeScript.',
+  //   tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vitest'],
+  //   link: 'https://github.com/jeaninetso/task-scheduler',
+  //   status: 'in progress',
+  // },
   {
     title: 'Telegram Contact Bridge',
     image: '/images/telegram-contact-bridge.png',
