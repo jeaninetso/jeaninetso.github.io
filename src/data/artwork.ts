@@ -13,12 +13,12 @@ export const artwork: ArtworkPiece[] = [
   {
     title: 'Eagle Academy Christmas Party (Cambodia)',
     image: '/images/eagle-academy-christmas-party.png',
-    text: 'Flyer designed for a Christmas party during my year mentoring with the International Student Leadership Program in Phnom Penh, Cambodia. Tools: Canva.',
+    text: 'Flyer designed for a Christmas party during my year mentoring students in Cambodia. Tools: Canva.',
   },
   {
     title: 'First-Gen Mentorship Introduction',
     image: '/images/first-gen-mentorship-intro.png',
-    text: 'Flyer introducing a first-generation student mentorship initiative. Tools: Canva.',
+    text: 'Flyer introducing a first-generation student mentorship initiative with Acts 2 Campus Network. Tools: Canva.',
   },
   {
     title: 'KingPin Donuts',

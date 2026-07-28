@@ -2,7 +2,7 @@ const links = [
   { id: 'home', label: 'home' },
   { id: 'experience', label: 'experience' },
   { id: 'projects', label: 'projects' },
-  { id: 'artwork', label: 'artwork' },
+  { id: 'artwork', label: 'art & design' },
   { id: 'resume', label: 'resume' },
 ]
 

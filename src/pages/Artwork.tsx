@@ -11,7 +11,7 @@ export default function Artwork() {
   return (
     <div className="pt-2">
       <h1 className="font-mono text-3xl font-medium text-ink sm:text-4xl">
-        Artwork
+        Art &amp; Design
       </h1>
       <div className="mt-10">
         <div key={piece.title} className="animate-[fade-in_0.3s_ease-out]">
