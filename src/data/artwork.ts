@@ -6,6 +6,21 @@ export type ArtworkPiece = {
 
 export const artwork: ArtworkPiece[] = [
   {
+    title: 'UC Berkeley Welcome Week',
+    image: '/images/uc-berkeley-welcome-week.png',
+    text: 'Flyers designed for UC Berkeley Welcome Week events. Tools: Canva.',
+  },
+  {
+    title: 'Eagle Academy Christmas Party (Cambodia)',
+    image: '/images/eagle-academy-christmas-party.png',
+    text: 'Flyer designed for a Christmas party during my year mentoring with the International Student Leadership Program in Phnom Penh, Cambodia. Tools: Canva.',
+  },
+  {
+    title: 'First-Gen Mentorship Introduction',
+    image: '/images/first-gen-mentorship-intro.png',
+    text: 'Flyer introducing a first-generation student mentorship initiative. Tools: Canva.',
+  },
+  {
     title: 'KingPin Donuts',
     image: '/images/all-donuts.png',
     text: 'Illustrated a variety of donut flavors for the menu of a website redesign (see Projects). Flavor varieties are from KingPin Donuts. Tools: Adobe Illustrator.',
