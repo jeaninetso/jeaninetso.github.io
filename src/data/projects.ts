@@ -33,14 +33,6 @@ export const personalProjects: Project[] = [
     status: 'in progress',
   },
   {
-    title: 'Job Search Tracker',
-    blurb:
-      'A shared accountability tool for a friend group job-searching together: everyone sets a daily checklist of goals and keeps a streak alive by completing it.',
-    tags: ['React', 'TypeScript', 'Supabase'],
-    link: 'https://github.com/jeaninetso/job-search-tracker',
-    status: 'in progress',
-  },
-  {
     title: 'Scripture Quest',
     image: '/images/scripture-quest.png',
     blurb:
