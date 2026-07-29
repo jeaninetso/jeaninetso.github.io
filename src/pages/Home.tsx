@@ -7,7 +7,7 @@ export default function Home() {
           alt="Jeanine"
           className="w-20 shrink-0 rounded-md sm:w-24"
         />
-        <h1 className="whitespace-nowrap font-mono text-3xl font-medium text-ink sm:text-4xl">
+        <h1 className="font-mono text-3xl font-medium text-ink sm:text-4xl">
           Hello, I&apos;m Jeanine.
         </h1>
       </div>
