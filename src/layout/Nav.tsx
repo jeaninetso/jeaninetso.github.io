@@ -1,9 +1,10 @@
 const links = [
-  { id: 'home', label: 'home' },
-  { id: 'experience', label: 'experience' },
-  { id: 'projects', label: 'projects' },
-  { id: 'artwork', label: 'art & design' },
-  { id: 'resume', label: 'resume' },
+  { id: 'home', label: 'Home' },
+  { id: 'about', label: 'About' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'artwork', label: 'Art & Design' },
+  { id: 'resume', label: 'Résumé' },
 ]
 
 function scrollToSection(
@@ -19,7 +20,7 @@ function scrollToSection(
 
 export default function Nav({ active }: { active: string }) {
   return (
-    <nav className="flex flex-row flex-wrap gap-x-6 gap-y-2 font-mono text-sm tracking-wide sm:flex-col sm:gap-y-4">
+    <nav className="flex flex-row flex-wrap gap-x-5 gap-y-1 sm:flex-col sm:gap-y-3">
       {links.map((link) => {
         const isActive = active === link.id
         return (
@@ -27,20 +28,20 @@ export default function Nav({ active }: { active: string }) {
             key={link.id}
             href={`#${link.id}`}
             onClick={(event) => scrollToSection(event, link.id)}
-            className={`flex items-center transition-colors duration-300 ease-out ${
-              isActive
-                ? 'text-ink'
-                : 'text-ink-faint hover:text-accent'
+            aria-current={isActive ? 'location' : undefined}
+            className={`group flex items-center gap-2 text-sm transition-colors duration-300 ease-out sm:text-[0.95rem] ${
+              isActive ? 'text-ink' : 'text-ink-faint hover:text-accent'
             }`}
           >
             <span
-              className="inline-block w-3 text-accent transition-opacity duration-300 ease-out"
-              style={{ opacity: isActive ? 1 : 0 }}
               aria-hidden="true"
-            >
-              {'>'}
+              className={`hidden h-px bg-accent transition-all duration-300 ease-out sm:inline-block ${
+                isActive ? 'w-4' : 'w-0'
+              }`}
+            />
+            <span className={isActive ? 'font-serif text-base italic sm:text-lg' : ''}>
+              {link.label}
             </span>
-            {link.label}
           </a>
         )
       })}

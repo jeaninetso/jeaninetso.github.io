@@ -38,10 +38,10 @@ export default function Card({
           className="mb-4 w-full rounded-sm"
         />
       )}
-      <div className="flex items-center justify-between gap-3">
-        <h3 className="font-mono text-base font-medium text-ink">{title}</h3>
+      <div className="flex items-baseline justify-between gap-3">
+        <h3 className="font-serif text-2xl leading-snug text-ink">{title}</h3>
         {badge && (
-          <span className="shrink-0 rounded-full bg-paper px-2 py-0.5 font-mono text-xs text-ink-faint">
+          <span className="shrink-0 rounded-full bg-paper px-2 py-0.5 text-[0.7rem] font-medium uppercase tracking-[0.12em] text-ink-faint">
             {badge}
           </span>
         )}
@@ -52,7 +52,7 @@ export default function Card({
           {tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full border border-line px-2 py-0.5 font-mono text-xs text-ink-soft"
+              className="rounded-full border border-line px-2 py-0.5 text-xs text-ink-soft"
             >
               {tag}
             </span>

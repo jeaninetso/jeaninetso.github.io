@@ -1,58 +1,37 @@
+const contacts = [
+  { label: 'Email', href: 'mailto:jtso3388@berkeley.edu' },
+  { label: 'LinkedIn', href: 'https://linkedin.com/in/jeanine-tso' },
+  { label: 'GitHub', href: 'https://github.com/jeaninetso' },
+]
+
 export default function Home() {
   return (
-    <div className="px-4 pt-6 sm:px-10 sm:pt-10">
-      <div className="flex items-center gap-5">
-        <img
-          src="/images/jeanine-jumping.png"
-          alt="Jeanine"
-          className="w-20 shrink-0 rounded-md sm:w-24"
-        />
-        <h1 className="font-mono text-3xl font-medium text-ink sm:text-4xl">
-          Hello, I&apos;m Jeanine.
-        </h1>
-      </div>
-      <div className="mt-6 max-w-xl space-y-5 text-base leading-relaxed sm:text-lg">
-        <p>
-          Software engineer is my title; I love grinding through tickets. But
-          I&apos;d always rather start by listening to people&apos;s stories
-          to build solutions that truly address their needs.
-        </p>
-        <p>
-          That&apos;s why I spent this past year in Cambodia launching a
-          local chapter of the{' '}
-          <a
-            href="https://www.internationalmentorship.org/"
-            target="_blank"
-            rel="noreferrer"
-            className="text-accent underline decoration-accent-soft underline-offset-2 hover:decoration-accent"
-          >
-            International Student Mentorship Program
-          </a>
-          , supporting college students with academic, professional, and
-          spiritual mentorship. Before that, I was at Moody&apos;s for almost
-          four years as a software engineer.
-        </p>
-        <p>
-          I&apos;m looking for my next software engineering role! If
-          you&apos;d like to forward any opportunities, please reach me via{' '}
-          <a
-            href="mailto:jtso3388@berkeley.edu"
-            className="text-accent underline decoration-accent-soft underline-offset-2 hover:decoration-accent"
-          >
-            email
-          </a>{' '}
-          or{' '}
-          <a
-            href="https://linkedin.com/in/jeanine-tso"
-            target="_blank"
-            rel="noreferrer"
-            className="text-accent underline decoration-accent-soft underline-offset-2 hover:decoration-accent"
-          >
-            LinkedIn
-          </a>{' '}
-          ◡̈
-        </p>
-      </div>
+    <div className="pt-4 sm:pt-16">
+      <p className="eyebrow">Software Engineer, Frontend &middot; Muon Space</p>
+      <h1 className="mt-6 font-serif text-[clamp(4rem,12vw,8.5rem)] leading-[0.88] tracking-[-0.01em] text-ink">
+        Jeanine
+        <br />
+        <em>Tso Lin</em>
+      </h1>
+      <div className="mt-10 h-px w-14 bg-accent" aria-hidden="true" />
+      <p className="mt-8 max-w-xl text-lg leading-relaxed sm:text-xl">
+        I build interfaces at Muon Space and mentor college students in the Bay
+        Area. Off the clock, I illustrate and design.
+      </p>
+      <ul className="mt-8 flex flex-wrap gap-x-7 gap-y-2 text-sm">
+        {contacts.map((contact) => (
+          <li key={contact.label}>
+            <a
+              href={contact.href}
+              target={contact.href.startsWith('http') ? '_blank' : undefined}
+              rel="noreferrer"
+              className="link-underline"
+            >
+              {contact.label}
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }

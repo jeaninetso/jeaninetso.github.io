@@ -1,27 +1,86 @@
 @import "tailwindcss";
 
-@theme {
-  --font-mono: "DM Mono", ui-monospace, monospace;
-  --font-sans: "DM Sans", ui-sans-serif, sans-serif;
 
-  --color-ink: #3a2c20;
-  --color-ink-soft: #6b5a49;
-  --color-ink-faint: #a4907d;
+@theme {
+  --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
+  --font-sans: "Hanken Grotesk", ui-sans-serif, sans-serif;
+
+  --color-ink: #33261b;
+  --color-ink-soft: #64533f;
+  --color-ink-faint: #8c7763;
   --color-paper: #f2eee6;
-  --color-paper-dim: #ece5d8;
-  --color-line: #ddd0bd;
+  --color-paper-dim: #ebe4d6;
+  --color-line: #dccfbb;
   --color-accent: #8a5324;
   --color-accent-soft: #e3cdae;
+
+  /* The narrow white mat each piece sits on. */
+  --color-mat: #fbfaf7;
 }
+
+@utility link-underline {
+  color: var(--color-accent);
+  text-decoration-line: underline;
+  text-decoration-color: var(--color-accent-soft);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 200ms ease-out;
+  &:hover {
+    text-decoration-color: var(--color-accent);
+  }
+}
+
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+}
+
+/*
+ * Gallery mode: when Art & Design is the active section, html gets
+ * [data-gallery] and the palette swaps to a dark wall. Registering the
+ * tokens with @property is what lets the swap cross-fade instead of snap.
+ */
+@property --color-ink { syntax: "<color>"; inherits: true; initial-value: #33261b; }
+@property --color-ink-soft { syntax: "<color>"; inherits: true; initial-value: #64533f; }
+@property --color-ink-faint { syntax: "<color>"; inherits: true; initial-value: #8c7763; }
+@property --color-paper { syntax: "<color>"; inherits: true; initial-value: #f2eee6; }
+@property --color-line { syntax: "<color>"; inherits: true; initial-value: #dccfbb; }
+@property --color-accent { syntax: "<color>"; inherits: true; initial-value: #8a5324; }
+@property --color-accent-soft { syntax: "<color>"; inherits: true; initial-value: #e3cdae; }
 
 html {
   min-height: 100vh;
   scroll-behavior: smooth;
+  --gallery-fade: 0.8s ease;
+  transition:
+    --color-ink var(--gallery-fade),
+    --color-ink-soft var(--gallery-fade),
+    --color-ink-faint var(--gallery-fade),
+    --color-paper var(--gallery-fade),
+    --color-line var(--gallery-fade),
+    --color-accent var(--gallery-fade),
+    --color-accent-soft var(--gallery-fade);
+}
+
+/* Espresso gallery wall. */
+html[data-gallery] {
+  color-scheme: dark;
+  --color-ink: #f1e7d8;
+  --color-ink-soft: #c8b7a1;
+  --color-ink-faint: #94816c;
+  --color-paper: #1c1612;
+  --color-line: #3a2e25;
+  --color-accent: #d9a86c;
+  --color-accent-soft: #5c4430;
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+    transition: none;
   }
 }
 
@@ -35,6 +94,10 @@ body {
 ::selection {
   background-color: var(--color-accent-soft);
   color: var(--color-ink);
+}
+
+dialog::backdrop {
+  background-color: rgb(42 33 26 / 0.72);
 }
 
 @keyframes fade-in {

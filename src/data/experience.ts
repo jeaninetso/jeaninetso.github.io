@@ -10,17 +10,20 @@ export type Role = {
   company: string
   title: string
   dates: string
-  logo?: string
   summary?: string
   cards?: Card[]
 }
 
 export const roles: Role[] = [
   {
+    company: 'Muon Space',
+    title: 'Software Engineer, Frontend',
+    dates: '2026–Present',
+  },
+  {
     company: "Moody's",
     title: 'Software Engineer',
     dates: '2021–2025',
-    logo: '/images/moodys-logo.png',
     summary:
       'Worked across several teams over four years, spanning back-end financial modeling APIs and front-end product work.',
     cards: [
@@ -51,20 +54,19 @@ export const roles: Role[] = [
   {
     company: 'Marqui Labs',
     title: 'Front-End Developer Intern',
-    dates: '2023',
-    logo: '/images/marqui-labs-logo.png',
+    dates: '2020–2021',
     summary:
       'Front-end development for a NASA-contracted startup, working across a Vue.js/Nuxt.js stack with a Directus headless CMS.',
     cards: [
       {
         title: 'NASA Advanced Air Mobility Portal',
         text: 'Integrated a front-end with a headless CMS (Directus) during a Nuxt.js migration, and helped build a content architecture that reduced file redundancies.',
-        image: '/images/aam.png',
+        image: '/images/aam.webp',
       },
       {
         title: 'NASA University Leadership Initiative',
         text: 'Designed and implemented a fully mobile-responsive site to improve user experience finding program information.',
-        image: '/images/uli.png',
+        image: '/images/uli.webp',
         link: 'https://uli-v4.netlify.app/',
         linkLabel: 'site',
       },
