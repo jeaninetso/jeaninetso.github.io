@@ -5,19 +5,21 @@ export type ArtworkPiece = {
   height: number
   text: string
   tools: string
+  // Slide decks: every slide shown in the modal; `image` is the cover.
+  slides?: string[]
 }
 
-// Hang order: four groups whose aspect ratios each sum to about 3.2 to 3.45,
-// so desktop justified rows (row target 200px, 860px wall) break between
-// groups and come out within a few px of the same height.
+// Hang order: tuned so desktop justified rows (row target 200px, 860px wall)
+// break into four rows within about 25px of the same height, with the deck
+// in the first row.
 export const artwork: ArtworkPiece[] = [
   {
-    title: 'KingPin Donuts',
-    image: '/images/all-donuts.webp',
-    width: 1600,
-    height: 786,
-    text: 'Illustrated a variety of donut flavors for the menu of a website redesign (see Projects). Flavor varieties are from KingPin Donuts.',
-    tools: 'Adobe Illustrator',
+    title: 'Spring Party at Redwood Gardens',
+    image: '/images/a2cn-spring-party.webp',
+    width: 1200,
+    height: 1800,
+    text: 'Flyer inviting UC Berkeley students to serve elderly residents at a spring party.',
+    tools: 'Canva',
   },
   {
     title: 'Crazy, Lying, or Legit?',
@@ -28,36 +30,15 @@ export const artwork: ArtworkPiece[] = [
     tools: 'Canva',
   },
   {
-    title: 'Spring Party at Redwood Gardens',
-    image: '/images/a2cn-spring-party.webp',
-    width: 1200,
-    height: 1800,
-    text: 'Flyer inviting UC Berkeley students to serve elderly residents at a spring party.',
-    tools: 'Canva',
-  },
-  {
-    title: 'Observe My Ways',
-    image: '/images/proverbs.webp',
-    width: 1600,
-    height: 1600,
-    text: 'Inspired by Proverbs 23:26, "My son, give me your heart, and let your eyes observe my ways." Intended to portray the closeness of scrutiny that humans need to have of their own lives if they are to call themselves examples for others.',
-    tools: 'Adobe Illustrator',
-  },
-  {
-    title: 'The Tso Family',
-    image: '/images/tso-family.webp',
+    title: 'Remarks on Gratitude',
+    image: '/images/gratitude-slide-01.webp',
     width: 1600,
     height: 900,
-    text: 'LEGO versions of my family members, gifted to my dad for his birthday.',
-    tools: 'Adobe Illustrator',
-  },
-  {
-    title: 'Why is There So Much Violence in the Bible?',
-    image: '/images/violence-in-the-bible.webp',
-    width: 1200,
-    height: 1800,
-    text: 'Typographic flyer for an apologetics talk at UC Berkeley.',
+    text: "Slides for a talk on gratitude at ISMP Cambodia's American Thanksgiving Festival in Phnom Penh. I designed the layout and typography; photos are stock.",
     tools: 'Canva',
+    slides: ['01', '06', '08', '17', '21', '24'].map(
+      (n) => `/images/gratitude-slide-${n}.webp`,
+    ),
   },
   {
     title: 'Truth Journey',
@@ -65,6 +46,14 @@ export const artwork: ArtworkPiece[] = [
     width: 1200,
     height: 1800,
     text: 'Flyer for an apologetics talk at UC Berkeley, hosted by Klesis.',
+    tools: 'Canva',
+  },
+  {
+    title: 'Why is There So Much Violence in the Bible?',
+    image: '/images/violence-in-the-bible.webp',
+    width: 1200,
+    height: 1800,
+    text: 'Typographic flyer for an apologetics talk at UC Berkeley.',
     tools: 'Canva',
   },
   {
@@ -76,11 +65,11 @@ export const artwork: ArtworkPiece[] = [
     tools: 'Adobe Illustrator',
   },
   {
-    title: 'UC Berkeley Welcome Week',
-    image: '/images/uc-berkeley-welcome-week.webp',
+    title: 'Eagle Academy Christmas Party (Cambodia)',
+    image: '/images/eagle-academy-christmas-party.webp',
     width: 1600,
-    height: 1385,
-    text: 'Flyers designed for UC Berkeley Welcome Week events.',
+    height: 1127,
+    text: 'Flyer designed for a Christmas party during my year mentoring students in Cambodia.',
     tools: 'Canva',
   },
   {
@@ -92,11 +81,35 @@ export const artwork: ArtworkPiece[] = [
     tools: 'Canva',
   },
   {
-    title: 'Eagle Academy Christmas Party (Cambodia)',
-    image: '/images/eagle-academy-christmas-party.webp',
+    title: 'KingPin Donuts',
+    image: '/images/all-donuts.webp',
     width: 1600,
-    height: 1127,
-    text: 'Flyer designed for a Christmas party during my year mentoring students in Cambodia.',
+    height: 786,
+    text: 'Illustrated a variety of donut flavors for the menu of a website redesign (see Projects). Flavor varieties are from KingPin Donuts.',
+    tools: 'Adobe Illustrator',
+  },
+  {
+    title: 'UC Berkeley Welcome Week',
+    image: '/images/uc-berkeley-welcome-week.webp',
+    width: 1600,
+    height: 1385,
+    text: 'Flyers designed for UC Berkeley Welcome Week events.',
     tools: 'Canva',
+  },
+  {
+    title: 'The Tso Family',
+    image: '/images/tso-family.webp',
+    width: 1600,
+    height: 900,
+    text: 'LEGO versions of my family members, gifted to my dad for his birthday.',
+    tools: 'Adobe Illustrator',
+  },
+  {
+    title: 'Observe My Ways',
+    image: '/images/proverbs.webp',
+    width: 1600,
+    height: 1600,
+    text: 'Inspired by Proverbs 23:26, "My son, give me your heart, and let your eyes observe my ways." Intended to portray the closeness of scrutiny that humans need to have of their own lives if they are to call themselves examples for others.',
+    tools: 'Adobe Illustrator',
   },
 ]

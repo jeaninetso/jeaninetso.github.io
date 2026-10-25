@@ -20,7 +20,9 @@ const justified = (piece: ArtworkPiece) => {
 export default function Artwork() {
   const dialogRef = useRef<HTMLDialogElement>(null)
   const [open, setOpen] = useState<number | null>(null)
+  const [slide, setSlide] = useState(0)
   const piece = open === null ? null : artwork[open]
+  const shown = piece?.slides?.[slide] ?? piece?.image
 
   // Open after the piece renders so showModal() can focus a real control.
   useEffect(() => {
@@ -30,6 +32,7 @@ export default function Artwork() {
 
   const show = (i: number) => {
     setOpen(i)
+    setSlide(0)
     // Same piece as the (stale) state: the effect won't re-run, so open here.
     const dialog = dialogRef.current
     if (i === open && dialog && !dialog.open) dialog.showModal()
@@ -43,6 +46,7 @@ export default function Artwork() {
   const step = (delta: number) => {
     if (open === null) return
     setOpen((open + delta + artwork.length) % artwork.length)
+    setSlide(0)
   }
 
   return (
@@ -106,7 +110,7 @@ export default function Artwork() {
             {/* The art and text re-key per piece; the nav buttons don't, so they keep focus. */}
             <div
               key={`${piece.title}-art`}
-              className="flex animate-[fade-in_0.25s_ease-out] items-center justify-center"
+              className="flex animate-[fade-in_0.25s_ease-out] flex-col items-center justify-center gap-4"
             >
               {/* Cap by height so tall flyers fit on screen beside the text. */}
               <div
@@ -116,12 +120,37 @@ export default function Artwork() {
                 }}
               >
                 <Frame
-                  src={piece.image}
-                  alt={piece.title}
+                  key={shown}
+                  src={shown!}
+                  alt={
+                    piece.slides
+                      ? `${piece.title}, slide ${slide + 1} of ${piece.slides.length}`
+                      : piece.title
+                  }
                   width={piece.width}
                   height={piece.height}
                 />
               </div>
+              {piece.slides && (
+                <div className="flex w-full flex-wrap justify-center gap-2">
+                  {piece.slides.map((src, i) => (
+                    <button
+                      key={src}
+                      type="button"
+                      onClick={() => setSlide(i)}
+                      aria-label={`Slide ${i + 1}`}
+                      aria-current={i === slide}
+                      className={`w-14 p-0.5 transition sm:w-16 ${
+                        i === slide
+                          ? 'bg-accent'
+                          : 'bg-line opacity-60 hover:opacity-100'
+                      }`}
+                    >
+                      <img src={src} alt="" className="block w-full" />
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
 
             <div className="flex flex-col md:py-6">

@@ -8,11 +8,21 @@ export default function Home() {
   return (
     <div className="pt-4 sm:pt-16">
       <p className="eyebrow">Software Engineer, Frontend &middot; Muon Space</p>
-      <h1 className="mt-6 font-serif text-[clamp(4rem,12vw,8.5rem)] leading-[0.88] tracking-[-0.01em] text-ink">
-        Jeanine
-        <br />
-        <em>Tso Lin</em>
-      </h1>
+      <div className="mt-6 flex items-end gap-5 sm:gap-10">
+        <h1 className="font-serif text-[clamp(4rem,12vw,8.5rem)] leading-[0.88] tracking-[-0.01em] text-ink">
+          Jeanine
+          <br />
+          <em>Tso Lin</em>
+        </h1>
+        {/* Colored-pencil portrait, cut out with an uneven, painterly fade at the bottom. */}
+        <img
+          src="/images/jeanine-portrait.webp"
+          alt="Colored pencil portrait of Jeanine"
+          width={920}
+          height={1052}
+          className="w-[clamp(7rem,26vw,15rem)] shrink-0"
+        />
+      </div>
       <div className="mt-10 h-px w-14 bg-accent" aria-hidden="true" />
       <p className="mt-8 max-w-xl text-lg leading-relaxed sm:text-xl">
         I build interfaces at Muon Space and mentor college students in the Bay
